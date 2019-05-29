@@ -1,0 +1,362 @@
+* {margin:0;padding:0;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,td {
+	outline:0;
+	border:0;
+}
+a {outline: none}
+table {
+	border-collapse:collapse;
+	border-spacing:0 none;
+}
+fieldset,img,img a { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { 
+	border:0;
+}
+a {
+	color:inherit;
+	text-decoration: inherit;
+}
+#cover {
+	background: url(cover.png);
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	position: fixed;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+#cover_content {
+	width: 50%;
+	min-height: 300px;
+	max-height: 60%;
+	overflow-y: scroll;
+	background: #ffffff;
+	left: 25%;
+	position: relative;
+	top: 20%;	
+	padding: 20px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#cover_close {
+	position:absolute;
+	left: 75%;
+	top: 20%;
+	width: 20px;
+	height: 20px;
+	background: #f67280;
+	background-image: url(close.png);
+	background-size: contain;
+	margin-left: 20px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Quicksand;
+}
+
+nav {
+	position: fixed;
+	background-color: white;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	padding: 10px 100px;
+	box-sizing: border-box;
+	z-index: 10;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.login_nav {
+	background-color: #f7e9e9 !important;
+}
+
+nav .logo {
+	padding: 22px 20px;
+	float: left;
+	font-size: 24px;
+}
+
+
+
+nav ul {
+	list-style: none;
+	float: right;
+	margin: 0;
+	display: flex;
+}
+
+
+nav ul li a {
+	line-height: 80px;
+	color: #151515;
+	padding: 12px 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .3s;
+}
+
+.login_background{
+	background: url(bkgr.jpg);
+}
+
+section.sec1 {
+	width: 90%;
+	height: 100vh;
+	/*background: url(bkgr.jpg);*/
+	background-size: cover;
+	background-position: center;
+	padding-top: 140px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+.content p {
+	width: 70%;
+	margin: 50px;
+	text-align: justify;
+	font-size: 20px;
+}
+
+.login, .register_form, .event_form, .form_cal, .cal_list {
+	position: relative;
+	background: rgba(255,255,255,0.5);
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.cal_edit, .event_edit {
+	position: relative;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	text-align: center;
+}
+
+.login input, .register_form input, #gender_id, .event_form input, #calendar_id, #description, #priority_id,
+.form_cal input, #select_calendar, .cal_edit input, .event_edit input {
+	font-family: "Quicksand", sans-serif;
+	outline: 0;
+ 	background: #e8f0fc;
+	width: 100%;
+  	border: 0;
+ 	margin: 0 0 15px;
+ 	padding: 15px;
+ 	box-sizing: border-box;
+ 	font-size: 14px;
+}
+
+#select_calendar {
+	font-size: 20px !important;
+	width: 60% !important;
+}
+.login table {
+	margin: 30px auto 0;	
+}
+
+.btn_login, .btn_register, .btn_event, .btn_cal, .btn_back, .new_calendar, .btn_update, .confirm_yes, .confirm_no {
+	font-family: "Quicksand", sans-serif;
+ 	text-transform: uppercase;
+	outline: 0; 
+	width: 40%;
+	border: 0;
+	padding: 15px !important;
+  	color: #FFFFFF !important;
+  	font-size: 14px; 
+  	transition: all 0.3 ease;
+  	cursor: pointer;
+	margin: 10px auto 20px !important;
+	display: inline-block;
+}
+
+.confirm_yes, .confirm_no {
+	width: 15% !important;
+}
+
+.view {
+	font-family: "Quicksand", sans-serif;
+ 	text-transform: uppercase;
+	outline: 0; 
+	border: 0;
+	padding: 15px !important;
+  	color: #FFFFFF !important;
+  	font-size: 14px; 
+  	transition: all 0.3 ease;
+  	cursor: pointer;
+	display: inline-block;
+
+}
+
+.month {
+	margin: auto;
+	width: 100%;
+	text-align: left;
+	table-layout: fixed;
+	clear:both;
+}
+
+.week {
+	margin: auto;
+	width: 100%;
+	text-align: left;
+	table-layout: fixed;
+	clear:both;
+}
+
+.day {
+	margin: auto;
+	width: 100%;
+	text-align: left;
+
+	table-layout: fixed;
+	border-collapse: collapse;
+	clear:both;
+}
+
+.even {
+	background-color: #e8f0fc;
+}
+
+.clear {
+	clear:both;
+}
+
+.week td, .month td {
+	padding: 2px;
+	border: 1px solid #69c;
+	vertical-align: top;
+}
+.month td .container {
+	position: relative;
+}
+
+.month td:hover {
+	background: #e8f0fc;
+}
+.date_bground {
+	position:absolute;
+	top: 0;
+	right: 10px;
+	opacity: 0.2;
+	font-size: 50px;
+}
+.month_day {
+	padding: 2px;
+	min-height: 130px;
+	z-index:5;
+	background-color: none;
+}
+.month_today, .week_today {
+	border: 3px solid #69c !important;
+	background-color: #9ebbd9;
+}
+
+.btn {
+	margin: 0 10px;
+	padding: 3px 15px;
+	min-width: 100px;
+	background: #9ebbd9;
+	display: inline-block;
+	text-align: center;
+
+
+}
+
+.btn_after {
+	margin-top: 5px;
+}
+
+.btn_before {
+	margin-bottom: 5px; 
+}
+
+.view {
+	margin-top: 5px;
+	margin-bottom: 5px; 
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.time_nav {
+	height: 26px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.delete_event, #delete_event, .delete_calendar {
+	background-image: url(delete.png);
+}
+
+.update_event, #update_event, .update_calendar {
+	background-image: url(edit.png); 
+}
+
+.delete_event, .update_event, #delete_event, #update_event, 
+.delete_calendar, .update_calendar {
+	min-height: 20px;
+	width: 20px;
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#cover .delete_event, #cover .update_event, #delete_event, #update_event {
+	padding-left: 20px;
+}
+
+.delete_message {
+	margin-top: 50px;
+	text-align: center;
+}
+
+.user_cal tr:hover {
+	background: #e8f0fc;
+}
+
+.user_cal td {
+	padding: 3px 10px;
+}
+
+.user_cal {
+	margin: 0 auto;
+}
+
+.svetdiena {
+	background: #e8f0fc;
+}
